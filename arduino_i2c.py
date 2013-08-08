@@ -11,7 +11,7 @@ gpio_register = 0x09
 def writeNumber(value):
     with i2c.I2CMaster() as bus:
         bus.transaction(
-            i2c.writing_bytes(address, gpio_register, value))
+            i2c.writing_bytes(address, value))
     return -1
 
 def readNumber():
